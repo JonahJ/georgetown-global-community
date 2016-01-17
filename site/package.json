@@ -1,0 +1,29 @@
+{
+  "name": "georgetown-svg-storytelling",
+  "version": "0.0.1",
+  "description": "svg map of GU engagement",
+  "main": "index.js",
+  "scripts": {
+    "start": "opener http://localhost:8080/http & http-server",
+    "build": "npm run build-js",
+    "build-js": "webpack && uglifyjs http/js/app.js --screw-ie8 -c -m -o http/js/app.js",
+    "watch-js": "webpack -w",
+    "watch": "npm run watch-js"
+  },
+  "author": "jonah joselow",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-polyfill": "^6.1.19",
+    "babel-preset-es2015": "^6.1.18",
+    "http-server": "^0.8.5",
+    "opener": "^1.4.1",
+    "uglify-js": "^2.6.1",
+    "webpack": "^1.12.6"
+  },
+  "dependencies": {
+    "gsap": "^1.18.0"
+  }
+}
